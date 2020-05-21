@@ -36,9 +36,9 @@ function avetiRomana() {
 function avetiOra(ora, ora2) {
     let mess="";
     if(typeof(ora2)!='undefined') {
-        mess='<@&${process.env.roleId}> In doua minute aveti '+ora +' sau ' + ora2 + '. \nJoin Here: ' + zoomLinks[ora] + ' or here: '+zoomLinks[ora2];
+        mess=`<@&${process.env.roleId}> In doua minute aveti `+ora +' sau ' + ora2 + '. \nJoin Here: ' + zoomLinks[ora] + ' or here: '+zoomLinks[ora2];
     } else
-        mess='<@&${process.env.roleId}> In doua minute aveti '+ora+ '.  \nJoin Here: ' + zoomLinks[ora];
+        mess=`<@&${process.env.roleId}> In doua minute aveti `+ora+ '.  \nJoin Here: ' + zoomLinks[ora];
     client.channels.cache.get(channelId).send(mess);
 }
 let ora1Luni= new cron.CronJob('00 58 8 * * 1', ()=>avetiOra('romana'), undefined, true, "Europe/Athens");
