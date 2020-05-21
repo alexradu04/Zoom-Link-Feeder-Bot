@@ -5,7 +5,7 @@ const client= new Discord.Client();
 const channelId=process.env.channelId;
 client.once('ready', () => {
    console.log('Ready!');
-    client.channels.cache.get(channelId).send(`Test <@&${process.env.roleId}>`);
+    //client.channels.cache.get(channelId).send(`Test <@&${process.env.roleId}>`);
 });
 
 const zoomLinks= new Map();
